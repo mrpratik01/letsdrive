@@ -35,7 +35,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="about.css" />
+    <link rel="stylesheet" href="contact.css" />
     <link rel="icon" type="image/x-icon" href="./Image/favicon.ico" />
     <style>
       @font-face {
@@ -47,86 +47,130 @@
   </head>
 
   <body>
-    <header>
-      <div class="flex flex-wrap">
-        <div class="w-2/5">
-          <img
-            class="h-40 mx-10 w-auto"
-            src="./Image/letsdrivelogo-min.png"
-            alt="Logo"
-          />
-        </div>
-        <div>
-          <div class="flex flex-wrap">
-            <div>
-              <a class="" href=""
-                ><i class="text-yellow-600 mt-10 fas fa-clock fa-3x"></i
-              ></a>
-            </div>
-            <div class="mt-10 px-5 text-base">
-              <span class="">Mon - Fri 10:00 AM - 5:00 AM</span>
-              <span class="block">Sunday - Friday</span>
-            </div>
+    <div class="flex flex-wrap px-10">
+      <div class="w-2/5"></div>
+      <div>
+        <div class="flex flex-wrap">
+          <div>
+            <a class="" href=""
+              ><i class="text-yellow-600 mt-10 fas fa-clock fa-3x"></i
+            ></a>
           </div>
-        </div>
-        <div>
-          <div class="flex flex-wrap">
-            <div>
-              <a class="" href=""
-                ><i class="text-yellow-600 mt-10 fas fa-mobile-alt fa-3x"></i
-              ></a>
-            </div>
-            <div class="mt-10 px-5 text-base">
-              <span class="">+977-9815186155</span>
-              <span class="block">Contact Us For Help</span>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div class="flex flex-wrap">
-            <div>
-              <a class="" href=""
-                ><i
-                  class="text-yellow-600 mt-10 fas fa-map-marker-alt fa-3x"
-                ></i
-              ></a>
-            </div>
-            <div class="mt-10 px-5 text-base">
-              <span class="">Kumaripati, Lalitpur</span>
-              <span class="block">(Siddhartha bank building)</span>
-            </div>
+          <div class="mt-10 px-5 text-base">
+            <span class="">Mon - Fri 10:00 AM - 5:00 PM</span>
+            <span class="block">Sunday - Friday Closed</span>
           </div>
         </div>
       </div>
-
-      <div class="flex justify-center">
-        <nav class="w-2/3 h-12 p-3 bg-yellow-600 rounded-lg">
-          <ul class="list-none">
-            <li class="inline mx-10">
-              <a class="font-semibold text-white text-2xl" href="home.html"
-                >Home</a
-              >
+      <div>
+        <div class="flex flex-wrap">
+          <div>
+            <a class="" href=""
+              ><i class="text-yellow-600 mt-10 fas fa-mobile-alt fa-3x"></i
+            ></a>
+          </div>
+          <div class="mt-10 px-5 text-base">
+            <span class="">+977-9815186155</span>
+            <span class="block">Contact Us For Help</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="flex flex-wrap">
+          <div>
+            <a class="" href=""
+              ><i class="text-yellow-600 mt-10 fas fa-map-marker-alt fa-3x"></i
+            ></a>
+          </div>
+          <div class="mt-10 px-5 text-base">
+            <span class="">Kumaripati, Lalitpur</span>
+            <span class="block">(Siddhartha bank building)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <header
+      x-data="{ open: false }"
+      class="w-full text-gray-700 bg-white md:bg-white-600"
+    >
+      <div
+        class="flex flex-col max-w-screen-xl px-8 mx-auto md:items-center md:justify-between md:flex-row"
+      >
+        <div class="flex flex-row items-center justify-between py-6">
+          <div class="relative">
+            <a
+              href="index.html"
+              class="text-lg relative z-50 font-bold tracking-widest text-gray-900 -mt-20 rounded-lg focus:outline-none focus:shadow-outline"
+            >
+              <img class="w-20" src="./Image/letsdrivelogo-min.png" />
+            </a>
+          </div>
+          <button
+            class="rounded-lg md:hidden focus:outline-none focus:shadow-outline"
+            @click="open = !open"
+          >
+            <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+              <path
+                x-show="!open"
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              ></path>
+              <path
+                x-show="open"
+                fill-rule="evenodd"
+                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <nav
+          :class="{ 'transform md:transform-none': !open, 'h-full': open }"
+          class="h-0 md:h-auto flex flex-col flex-grow md:items-center pb-4 md:pb-0 md:flex md:justify-start md:flex-row origin-top duration-300 scale-y-0 w-2/3 h-12 p-3 bg-yellow-600 rounded-lg"
+        >
+          <li class="block relative">
+            <a
+              class="px-4 py-8 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-700 hover:underline focus:outline-none focus:shadow-outline"
+              href="home.html"
+              ><span class="font-bold text-white text-lg">Home</span></a
+            >
+          </li>
+          <li class="block relative">
+            <a
+              class="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-700 hover:underline focus:outline-none focus:shadow-outline"
+              href="about.html"
+              ><span class="font-bold text-white text-lg">About Us</span></a
+            >
+          </li>
+          <li class="block relative">
+            <a
+              class="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-700 hover:underline focus:outline-none focus:shadow-outline"
+              href="contact.html"
+              ><span class="font-bold text-white text-lg">Contact Us</span></a
+            >
+          </li>
+          <li class="block relative">
+            <a
+              class="px-4 py-2 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-700 hover:underline focus:outline-none focus:shadow-outline"
+              href="blog.html"
+              ><span class="font-bold text-white text-lg">Blog</span></a
+            >
+          </li>
+          <!-- <li class="block relative">
+              <a class="px-10 py-3 mt-2 text-sm text-center bg-button-blue text-white rounded-full shadow-lg md:mt-8 md:ml-4"
+                href="#">Join</a>
             </li>
-            <li class="inline mx-10">
-              <a class="font-semibold text-white text-2xl" href="about.html"
-                >About US</a
-              >
-            </li>
-            <li class="inline mx-10">
-              <a class="font-semibold text-white text-2xl" href="contact.html"
-                >Contact Us</a
-              >
-            </li>
-            <li class="inline mx-10">
-              <a class="font-semibold text-white text-2xl" href="#">Blog</a>
-            </li>
-          </ul>
+            <li class="block relative">
+              <a class="px-10 py-3 mt-2 text-sm text-center bg-yellow-500 text-white rounded-full shadow-lg md:mt-8 md:ml-4"
+                href="#">Donate</a>
+            </li> -->
         </nav>
       </div>
     </header>
 
     <!-- form -->
-    <div class="w-full lg:w-full px-4 py-10 p-20">
+    <div class="-mt-20 md:-mt-16 w-full lg:w-full px-4 py-10 p-20">
       <div>
         <h3
           class="text-black font-bold text-2xl md:text-3xl mt-10 ml-15 text-center"
@@ -134,49 +178,51 @@
           Get in touch with us !
         </h3>
       </div>
-      <form action="" method="post">
-        <div class="md:flex items-center mt-12">
-          <div class="w-full md:w-1/2 flex flex-col">
-            <label class="font-semibold leading-none">Name</label>
-            <input
-              type="text"
-              class="leading-none text-gray-900 p-3 focus:outline-none focus:border-blue-700 mt-4 bg-gray-100 border rounded border-gray-200"
-            />
+      <div class="ml-0 md:ml-56 w-full lg:w-2/3">
+        <form action="" method="post">
+          <div class="md:flex items-center mt-12">
+            <div class="w-full md:w-1/2 flex flex-col">
+              <label class="font-semibold leading-none">Name</label>
+              <input
+                type="text"
+                class="leading-none text-gray-900 p-3 focus:outline-none focus:border-blue-700 mt-4 bg-gray-100 border rounded border-gray-200"
+              />
+            </div>
+            <div class="w-full md:w-1/2 flex flex-col md:ml-6 md:mt-0 mt-4">
+              <label class="font-semibold leading-none">Phone</label>
+              <input
+                type="email"
+                class="leading-none text-gray-900 p-3 focus:outline-none focus:border-blue-700 mt-4 bg-gray-100 border rounded border-gray-200"
+              />
+            </div>
           </div>
-          <div class="w-full md:w-1/2 flex flex-col md:ml-6 md:mt-0 mt-4">
-            <label class="font-semibold leading-none">Phone</label>
-            <input
-              type="email"
-              class="leading-none text-gray-900 p-3 focus:outline-none focus:border-blue-700 mt-4 bg-gray-100 border rounded border-gray-200"
-            />
+          <div class="md:flex items-center mt-8">
+            <div class="w-full flex flex-col">
+              <label class="font-semibold leading-none">Subject</label>
+              <input
+                type="text"
+                class="leading-none text-gray-900 p-3 focus:outline-none focus:border-blue-700 mt-4 bg-gray-100 border rounded border-gray-200"
+              />
+            </div>
           </div>
-        </div>
-        <div class="md:flex items-center mt-8">
-          <div class="w-full flex flex-col">
-            <label class="font-semibold leading-none">Subject</label>
-            <input
-              type="text"
-              class="leading-none text-gray-900 p-3 focus:outline-none focus:border-blue-700 mt-4 bg-gray-100 border rounded border-gray-200"
-            />
+          <div>
+            <div class="w-full flex flex-col mt-8">
+              <label class="font-semibold leading-none">Message</label>
+              <textarea
+                type="text"
+                class="h-40 text-base leading-none text-gray-900 p-3 focus:outline-none focus:border-blue-700 mt-4 bg-gray-100 border rounded border-gray-200"
+              ></textarea>
+            </div>
           </div>
-        </div>
-        <div>
-          <div class="w-full flex flex-col mt-8">
-            <label class="font-semibold leading-none">Message</label>
-            <textarea
-              type="text"
-              class="h-40 text-base leading-none text-gray-900 p-3 focus:outline-none focus:border-blue-700 mt-4 bg-gray-100 border rounded border-gray-200"
-            ></textarea>
+          <div class="flex items-center justify-center w-full">
+            <button
+              class="mt-9 inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-black transition duration-200 rounded-full border border-black shadow-md hover:bg-black hover:text-white focus:shadow-outline focus:outline-none"
+            >
+              Send message
+            </button>
           </div>
-        </div>
-        <div class="flex items-center justify-center w-full">
-          <button
-            class="mt-9 inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-black transition duration-200 rounded-full border border-black shadow-md hover:bg-black hover:text-white focus:shadow-outline focus:outline-none"
-          >
-            Send message
-          </button>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
     <!-- aboutus -->
     <div class="bg-yellow-600 w-full lg:w-full flex flex-wrap justify-between">
@@ -253,34 +299,19 @@
               <nav class="pt-5">
                 <ul class="list-none">
                   <li class="">
-                    <a class="font-semibold text-white" href="#">Home</a>
+                    <a class="font-semibold text-white" href="home.html"
+                      >Home</a
+                    >
                   </li>
                   <li class="">
-                    <a class="font-semibold text-white" href="#">About US</a>
+                    <a class="font-semibold text-white" href="about.html"
+                      >About US</a
+                    >
                   </li>
                   <li class="">
-                    <a class="font-semibold text-white" href="#">Contact Us</a>
-                  </li>
-                  <li class="">
-                    <a class="font-semibold text-white" href="#">Blog</a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-          </div>
-          <div class="pl-20">
-            <h3 class="text-white text-xl pt-5">Usefull links</h3>
-            <div class="">
-              <nav class="pt-5">
-                <ul class="list-none">
-                  <li class="">
-                    <a class="font-semibold text-white" href="#">Home</a>
-                  </li>
-                  <li class="">
-                    <a class="font-semibold text-white" href="#">About US</a>
-                  </li>
-                  <li class="">
-                    <a class="font-semibold text-white" href="#">Contact Us</a>
+                    <a class="font-semibold text-white" href="contact.html"
+                      >Contact Us</a
+                    >
                   </li>
                   <li class="">
                     <a class="font-semibold text-white" href="#">Blog</a>
@@ -320,6 +351,10 @@
           </div>
         </div>
       </div>
+      <p class="text-white text-center mt-10 text-sm md:text-base">
+        &copy; 2022 Copyright by let's drive. All rights reserved | Site
+        designed By: Pratik Bhattarai
+      </p>
     </footer>
   </body>
 </html>
