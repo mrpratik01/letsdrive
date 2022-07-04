@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/brands.min.css"
+    />
+    <!-- Tailwind -->
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <!-- Alpine -->
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+    ></script>
+    <script
+      nomodule
+      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine-ie11.min.js"
+      defer
+    ></script>
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Poppins font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="about.css" />
+    <link rel="icon" type="image/x-icon" href="./Image/favicon.ico" />
+    <style>
+      @font-face {
+        font-family: Helvetica;
+        src: url("./Helvetica\ NeueLTW0693BlkExtObl.ttf");
+      }
+    </style>
+    <title>Let's Drive</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="flex flex-wrap">
+        <div class="w-2/5">
+          <img
+            class="h-40 mx-10 w-auto"
+            src="./Image/letsdrivelogo-min.png"
+            alt="Logo"
+          />
+        </div>
+        <div>
+          <div class="flex flex-wrap">
+            <div>
+              <a class="" href=""
+                ><i class="text-yellow-600 mt-10 fas fa-clock fa-3x"></i
+              ></a>
+            </div>
+            <div class="mt-10 px-5 text-base">
+              <span class="">Mon - Fri 10:00 AM - 5:00 AM</span>
+              <span class="block">Sunday - Friday</span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="flex flex-wrap">
+            <div>
+              <a class="" href=""
+                ><i class="text-yellow-600 mt-10 fas fa-mobile-alt fa-3x"></i
+              ></a>
+            </div>
+            <div class="mt-10 px-5 text-base">
+              <span class="">+977-9815186155</span>
+              <span class="block">Contact Us For Help</span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="flex flex-wrap">
+            <div>
+              <a class="" href=""
+                ><i
+                  class="text-yellow-600 mt-10 fas fa-map-marker-alt fa-3x"
+                ></i
+              ></a>
+            </div>
+            <div class="mt-10 px-5 text-base">
+              <span class="">Kumaripati, Lalitpur</span>
+              <span class="block">(Siddhartha bank building)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex justify-center">
+        <nav class="w-2/3 h-12 p-3 bg-yellow-600 rounded-lg">
+          <ul class="list-none">
+            <li class="inline mx-10">
+              <a class="font-semibold text-white text-2xl" href="home.html"
+                >Home</a
+              >
+            </li>
+            <li class="inline mx-10">
+              <a class="font-semibold text-white text-2xl" href="about.html"
+                >About US</a
+              >
+            </li>
+            <li class="inline mx-10">
+              <a class="font-semibold text-white text-2xl" href="contact.html"
+                >Contact Us</a
+              >
+            </li>
+            <li class="inline mx-10">
+              <a class="font-semibold text-white text-2xl" href="#">Blog</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- form -->
+    <div class="w-full lg:w-full px-4 py-10 p-20">
+      <div>
+        <h3
+          class="text-black font-bold text-2xl md:text-3xl mt-10 ml-15 text-center"
+        >
+          Get in touch with us !
+        </h3>
+      </div>
+      <form action="" method="post">
+        <div class="md:flex items-center mt-12">
+          <div class="w-full md:w-1/2 flex flex-col">
+            <label class="font-semibold leading-none">Name</label>
+            <input
+              type="text"
+              class="leading-none text-gray-900 p-3 focus:outline-none focus:border-blue-700 mt-4 bg-gray-100 border rounded border-gray-200"
+            />
+          </div>
+          <div class="w-full md:w-1/2 flex flex-col md:ml-6 md:mt-0 mt-4">
+            <label class="font-semibold leading-none">Phone</label>
+            <input
+              type="email"
+              class="leading-none text-gray-900 p-3 focus:outline-none focus:border-blue-700 mt-4 bg-gray-100 border rounded border-gray-200"
+            />
+          </div>
+        </div>
+        <div class="md:flex items-center mt-8">
+          <div class="w-full flex flex-col">
+            <label class="font-semibold leading-none">Subject</label>
+            <input
+              type="text"
+              class="leading-none text-gray-900 p-3 focus:outline-none focus:border-blue-700 mt-4 bg-gray-100 border rounded border-gray-200"
+            />
+          </div>
+        </div>
+        <div>
+          <div class="w-full flex flex-col mt-8">
+            <label class="font-semibold leading-none">Message</label>
+            <textarea
+              type="text"
+              class="h-40 text-base leading-none text-gray-900 p-3 focus:outline-none focus:border-blue-700 mt-4 bg-gray-100 border rounded border-gray-200"
+            ></textarea>
+          </div>
+        </div>
+        <div class="flex items-center justify-center w-full">
+          <button
+            class="mt-9 inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-black transition duration-200 rounded-full border border-black shadow-md hover:bg-black hover:text-white focus:shadow-outline focus:outline-none"
+          >
+            Send message
+          </button>
+        </div>
+      </form>
+    </div>
+    <!-- aboutus -->
+    <div class="bg-yellow-600 w-full lg:w-full flex flex-wrap justify-between">
+      <div class="pl-20 pt-10 md:p-20 md:pt-10">
+        <div class="flex">
+          <p class="text-black fas fa-phone-alt text-black text-3xl">
+            <span class="">Phone</span>
+          </p>
+        </div>
+        <div class="mt-1 md:mt-5 md:text-2xl text-base">
+          <p>+977-9815186155</p>
+          <p>+977-9815186155</p>
+        </div>
+      </div>
+      <div class="pl-20 pt-10 md:p-20 md:pt-10">
+        <div class="flex">
+          <p class="text-black fas fa-map-marker text-black text-3xl">
+            <span class="">Address</span>
+          </p>
+        </div>
+        <div class="mt-1 md:mt-5 md:text-2xl text-base">
+          <p>Kumaripati, Lalitpur</p>
+          <p>(Siddhartha bank building)</p>
+        </div>
+      </div>
+
+      <div class="pl-20 pt-10 pb-10 md:p-20 md:pt-10 md:pb-0">
+        <div class="flex">
+          <p class="text-black fas fa-envelope-open text-black text-3xl">
+            <span class="">Email</span>
+          </p>
+        </div>
+        <div class="mt-1 md:mt-5 md:text-2xl text-base">
+          <p>letsdrive@gmail.com</p>
+        </div>
+      </div>
+    </div>
+    <!-- map -->
+    <div class="h-96 md:h-96 w-full lg:w-full">
+      <iframe
+        class="h-full w-full"
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14134.362271046286!2d85.337848!3d27.6681365!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb192acacb0bff%3A0x39d2a767560ed253!2slets%20Drive%20Vehicle%20Rental!5e0!3m2!1sen!2snp!4v1656660496878!5m2!1sen!2snp"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+
+    <footer class="footer py-10">
+      <div class="flex flex-wrap -mt-14 md:mt-0 -ml-10 md:ml-0">
+        <div>
+          <img
+            class="h-40 mx-10 w-auto"
+            src="./Image/letsdrivelogo-min.png"
+            alt="Logo"
+          />
+          <div class="flex flex-wrap items-center px-14 -mt-10">
+            <i
+              class="fab fa-instagram fa-2x text-white hover:text-red-600 px-3"
+            ></i>
+            <i
+              class="fab fa-facebook fa-2x hover:text-blue-600 text-white px-3"
+            ></i>
+            <i
+              class="fab fa-twitter fa-2x hover:text-blue-600 text-white px-3"
+            ></i>
+          </div>
+        </div>
+        <div class="flex flex-wrap md:pl-44">
+          <div class="pl-20">
+            <h3 class="text-white text-xl pt-5">Usefull links</h3>
+            <div class="">
+              <nav class="pt-5">
+                <ul class="list-none">
+                  <li class="">
+                    <a class="font-semibold text-white" href="#">Home</a>
+                  </li>
+                  <li class="">
+                    <a class="font-semibold text-white" href="#">About US</a>
+                  </li>
+                  <li class="">
+                    <a class="font-semibold text-white" href="#">Contact Us</a>
+                  </li>
+                  <li class="">
+                    <a class="font-semibold text-white" href="#">Blog</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div class="pl-20">
+            <h3 class="text-white text-xl pt-5">Usefull links</h3>
+            <div class="">
+              <nav class="pt-5">
+                <ul class="list-none">
+                  <li class="">
+                    <a class="font-semibold text-white" href="#">Home</a>
+                  </li>
+                  <li class="">
+                    <a class="font-semibold text-white" href="#">About US</a>
+                  </li>
+                  <li class="">
+                    <a class="font-semibold text-white" href="#">Contact Us</a>
+                  </li>
+                  <li class="">
+                    <a class="font-semibold text-white" href="#">Blog</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div class="pl-20">
+            <h3 class="text-white text-xl pt-5">Our Teams</h3>
+            <div class="">
+              <nav class="pt-5">
+                <ul class="list-none">
+                  <li class="">
+                    <a class="font-semibold text-white" href="#">Support</a>
+                  </li>
+                  <li class="">
+                    <a class="font-semibold text-white" href="#">Contacts</a>
+                  </li>
+                  <li class="">
+                    <a class="font-semibold text-white" href="#">Typography</a>
+                  </li>
+                  <li class="">
+                    <a class="font-semibold text-white" href="#">FAQ</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div class="pl-20">
+            <h3 class="text-white text-xl pt-5">Company</h3>
+            <div class="pt-5">
+              <p class="text-white">Kumaripati, Lalitpur</p>
+              <p class="text-white">phone: +977-9815186155</p>
+              <p class="text-white">Email: letsdrive@gmail.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
