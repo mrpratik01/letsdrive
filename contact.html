@@ -46,11 +46,17 @@
     <title>Let's Drive</title>
   </head>
 
-  <body>
+  <body class="antialiased">
     <div class="flex flex-wrap px-10">
-      <div class="w-2/5"></div>
+      <div class="w-2/5">
+        <img
+          class="w-40 pt-10 invisible md:visible"
+          src="./Image/letsdrivelogo-min.png"
+          alt=""
+        />
+      </div>
       <div>
-        <div class="flex flex-wrap">
+        <div class="flex flex-wrap -mt-20 md:mt-0">
           <div>
             <a class="" href=""
               ><i class="text-yellow-600 mt-10 fas fa-clock fa-3x"></i
@@ -102,7 +108,10 @@
               href="index.html"
               class="text-lg relative z-50 font-bold tracking-widest text-gray-900 -mt-20 rounded-lg focus:outline-none focus:shadow-outline"
             >
-              <img class="w-20" src="./Image/letsdrivelogo-min.png" />
+              <img
+                class="w-32 items-center md:hidden"
+                src="./Image/letsdrivelogo-min.png"
+              />
             </a>
           </div>
           <button
@@ -131,8 +140,8 @@
         >
           <li class="block relative">
             <a
-              class="px-4 py-8 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-700 hover:underline focus:outline-none focus:shadow-outline"
-              href="home.html"
+              class="px-4 py-8 mt-2 text-sm bg-transparent rounded-lg md:mt-8 md:ml-4 hover:text-gray-700 hover:underline decoration-white focus:outline-none focus:shadow-outline"
+              href="index.html"
               ><span class="font-bold text-white text-lg">Home</span></a
             >
           </li>
@@ -158,13 +167,13 @@
             >
           </li>
           <!-- <li class="block relative">
-              <a class="px-10 py-3 mt-2 text-sm text-center bg-button-blue text-white rounded-full shadow-lg md:mt-8 md:ml-4"
-                href="#">Join</a>
-            </li>
-            <li class="block relative">
-              <a class="px-10 py-3 mt-2 text-sm text-center bg-yellow-500 text-white rounded-full shadow-lg md:mt-8 md:ml-4"
-                href="#">Donate</a>
-            </li> -->
+        <a class="px-10 py-3 mt-2 text-sm text-center bg-button-blue text-white rounded-full shadow-lg md:mt-8 md:ml-4"
+          href="#">Join</a>
+      </li>
+      <li class="block relative">
+        <a class="px-10 py-3 mt-2 text-sm text-center bg-yellow-500 text-white rounded-full shadow-lg md:mt-8 md:ml-4"
+          href="#">Donate</a>
+      </li> -->
         </nav>
       </div>
     </header>
@@ -273,14 +282,14 @@
     </div>
 
     <footer class="footer py-10">
-      <div class="flex flex-wrap -mt-14 md:mt-0 -ml-10 md:ml-0">
+      <div class="flex flex-wrap -mt-5 md:mt-0 -ml-10 md:ml-0">
         <div>
           <img
-            class="h-40 mx-10 w-auto"
+            class="w-40 mx-16"
             src="./Image/letsdrivelogo-min.png"
             alt="Logo"
           />
-          <div class="flex flex-wrap items-center px-14 -mt-10">
+          <div class="flex flex-wrap items-center px-14 mt-5">
             <i
               class="fab fa-instagram fa-2x text-white hover:text-red-600 px-3"
             ></i>
@@ -356,5 +365,9 @@
         designed By: Pratik Bhattarai
       </p>
     </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
