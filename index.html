@@ -44,6 +44,44 @@
         src: url("./Helvetica\ NeueLTW0693BlkExtObl.ttf");
       }
     </style>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init("YoxyCjDx2SlvNfkUT");
+      })();
+    </script>
+    <script type="text/javascript">
+      // var name = document.getElementById("name");
+      // var phone = document.getElementById("phone");
+      // var subject = document.getElementById("subject");
+      // var message = document.getElementById("message");
+
+      window.onload = function () {
+        document
+          .getElementById("contact-form")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+            // these IDs from the previous steps
+            emailjs.sendForm("service_mayxm5o", "template_lv6uovg", this).then(
+              function () {
+                console.log("SUCCESS!");
+              },
+              function (error) {
+                console.log("FAILED...", error);
+              }
+            );
+
+            document.getElementById("contact-form").reset();
+
+            alert("Your message has been send");
+          });
+      };
+    </script>
+
     <title>Let's Drive</title>
   </head>
 
@@ -110,11 +148,13 @@
 
     <div class="flex flex-wrap px-10">
       <div class="w-2/5">
-        <img
-          class="w-40 pt-10 invisible md:visible"
-          src="./Image/letsdrivelogo-min.png"
-          alt=""
-        />
+        <a href="index.html">
+          <img
+            class="w-40 pt-10 invisible md:visible"
+            src="./Image/letsdrivelogo-min.png"
+            alt=""
+          />
+        </a>
       </div>
       <div>
         <div class="flex flex-wrap -mt-20 md:mt-0">
@@ -1266,7 +1306,7 @@
         <div>
           <h3 class="text-black font-bold text-3xl mt-10 ml-24">Contact us</h3>
         </div>
-        <form action="" method="post">
+        <form id="contact-form" action="" method="post" name="contact-form">
           <div class="md:flex items-center mt-12">
             <div class="w-full md:w-1/2 flex flex-col">
               <label class="font-semibold leading-none">Name</label>
@@ -1274,6 +1314,7 @@
                 type="text"
                 placeholder="name"
                 id="name"
+                name="user_name"
                 autocomplete="off"
                 class="leading-none text-gray-900 p-3 focus:outline-none focus:border-blue-700 mt-4 bg-gray-100 border rounded border-gray-200"
               />
@@ -1284,6 +1325,7 @@
                 type="email"
                 placeholder="email"
                 id="email"
+                name="user_email"
                 autocomplete="off"
                 class="leading-none text-gray-900 p-3 focus:outline-none focus:border-blue-700 mt-4 bg-gray-100 border rounded border-gray-200"
               />
@@ -1296,6 +1338,7 @@
                 type="text"
                 placeholder="subject"
                 id="subject"
+                name="user_subject"
                 autocomplete="off"
                 class="leading-none text-gray-900 p-3 focus:outline-none focus:border-blue-700 mt-4 bg-gray-100 border rounded border-gray-200"
               />
@@ -1308,17 +1351,18 @@
                 type="text"
                 placeholder="message"
                 id="message"
+                name="user_message"
                 class="h-40 text-base leading-none text-gray-900 p-3 focus:outline-none focus:border-blue-700 mt-4 bg-gray-100 border rounded border-gray-200"
               ></textarea>
             </div>
           </div>
           <div class="flex items-center justify-center w-full">
-            <button
+            <input
               id="btn"
+              type="submit"
+              value="Send"
               class="mt-9 inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-black transition duration-200 rounded-full border border-black shadow-md hover:bg-black hover:text-white focus:shadow-outline focus:outline-none"
-            >
-              Send message
-            </button>
+            />
           </div>
         </form>
       </div>
@@ -1424,16 +1468,17 @@
               <nav class="pt-5">
                 <ul class="list-none">
                   <li class="">
-                    <a class="font-semibold text-white" href="#">Support</a>
+                    <a class="font-semibold text-white" href="contact.html"
+                      >Support</a
+                    >
                   </li>
                   <li class="">
-                    <a class="font-semibold text-white" href="#">Contacts</a>
+                    <a class="font-semibold text-white" href="contact.html"
+                      >Contacts</a
+                    >
                   </li>
                   <li class="">
                     <a class="font-semibold text-white" href="#">Typography</a>
-                  </li>
-                  <li class="">
-                    <a class="font-semibold text-white" href="#">FAQ</a>
                   </li>
                 </ul>
               </nav>
@@ -1459,33 +1504,6 @@
     <script>
       AOS.init();
     </script>
-    <script>
-      var btn = document.getElementById("btn");
-      btn.addEventListener("click", function (e) {
-        e.preventDefault();
-        var name = document.getElementById("name").value;
-        var email = document.getElementById("email").value;
-        var subject = document.getElementById("subject").value;
-        var message = document.getElementById("message").value;
-        var body =
-          "name:" +
-          name +
-          "<br/> email: " +
-          email +
-          "<br/> subject: " +
-          subject +
-          "<br/> message: " +
-          message;
-        Email.send({
-          Host: "smtp.yourisp.com",
-          Username: "bhattaraipratik663@gmail.com",
-          Password: "fmfnwhhmdarbfhpa",
-          To: "bhattaraipratik663@gmail.com",
-          From: email,
-          Subject: subject,
-          Body: body,
-        }).then((message) => alert(message));
-      });
-    </script>
+    <script></script>
   </body>
 </html>
