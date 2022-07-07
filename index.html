@@ -417,14 +417,14 @@
           <div
             class="flex justify-center p-5 rounded-md hover:rounded-lg transform hover:scale-125 duration-500"
           >
-            <img class="h-24" src="./Image/nissan.png" alt="icon-1" />
+            <img class="h-24" src="./Image/suzuki.png" alt="icon-1" />
           </div>
 
           <a href="#">
             <h5
               class="text-center mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
             >
-              Car (6 Seats)
+              Suzuki
             </h5>
             <hr />
           </a>
@@ -527,7 +527,7 @@
             <h5
               class="text-center mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
             >
-              Car (6 Seats)
+              Nissan
             </h5>
             <hr />
           </a>
@@ -621,14 +621,14 @@
           <div
             class="flex justify-center p-5 rounded-md hover:rounded-lg transform hover:scale-125 duration-500"
           >
-            <img class="h-24" src="./Image/nissan.png" alt="icon-1" />
+            <img class="h-24" src="./Image/scorpio.png" alt="icon-1" />
           </div>
 
           <a href="#">
             <h5
               class="text-center mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
             >
-              Car (6 Seats)
+              scorpio
             </h5>
             <hr />
           </a>
@@ -724,14 +724,14 @@
           <div
             class="flex justify-center p-5 rounded-md hover:rounded-lg transform hover:scale-125 duration-500"
           >
-            <img class="h-24" src="./Image/nissan.png" alt="icon-1" />
+            <img class="h-24" src="./Image/volkswagen.png" alt="icon-1" />
           </div>
 
           <a href="#">
             <h5
               class="text-center mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
             >
-              Car (6 Seats)
+              volkswagen
             </h5>
             <hr />
           </a>
@@ -825,14 +825,14 @@
           <div
             class="flex justify-center p-5 rounded-md hover:rounded-lg transform hover:scale-125 duration-500"
           >
-            <img class="h-24" src="./Image/nissan.png" alt="icon-1" />
+            <img class="h-24" src="./Image/kia.png" alt="icon-1" />
           </div>
 
           <a href="#">
             <h5
               class="text-center mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
             >
-              Car (6 Seats)
+              Kia
             </h5>
             <hr />
           </a>
@@ -926,14 +926,14 @@
           <div
             class="flex justify-center p-5 rounded-md hover:rounded-lg transform hover:scale-125 duration-500"
           >
-            <img class="h-24" src="./Image/nissan.png" alt="icon-1" />
+            <img class="h-24" src="./Image/renault.png" alt="icon-1" />
           </div>
 
           <a href="#">
             <h5
               class="text-center mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
             >
-              Car (6 Seats)
+              Renault
             </h5>
             <hr />
           </a>
@@ -1142,7 +1142,7 @@
               <h5
                 class="mb-2 pt-5 px-5 text-1xl font-semibold text-gray-900 dark:text-white"
               >
-                Car Renting Procedure in Nepal
+                Tips and Tricks to visit Himalayas in Nepal | Let's Drive
               </h5>
             </a>
             <p
@@ -1272,13 +1272,19 @@
               <label class="font-semibold leading-none">Name</label>
               <input
                 type="text"
+                placeholder="name"
+                id="name"
+                autocomplete="off"
                 class="leading-none text-gray-900 p-3 focus:outline-none focus:border-blue-700 mt-4 bg-gray-100 border rounded border-gray-200"
               />
             </div>
             <div class="w-full md:w-1/2 flex flex-col md:ml-6 md:mt-0 mt-4">
-              <label class="font-semibold leading-none">Phone</label>
+              <label class="font-semibold leading-none">email</label>
               <input
                 type="email"
+                placeholder="email"
+                id="email"
+                autocomplete="off"
                 class="leading-none text-gray-900 p-3 focus:outline-none focus:border-blue-700 mt-4 bg-gray-100 border rounded border-gray-200"
               />
             </div>
@@ -1288,6 +1294,9 @@
               <label class="font-semibold leading-none">Subject</label>
               <input
                 type="text"
+                placeholder="subject"
+                id="subject"
+                autocomplete="off"
                 class="leading-none text-gray-900 p-3 focus:outline-none focus:border-blue-700 mt-4 bg-gray-100 border rounded border-gray-200"
               />
             </div>
@@ -1297,12 +1306,15 @@
               <label class="font-semibold leading-none">Message</label>
               <textarea
                 type="text"
+                placeholder="message"
+                id="message"
                 class="h-40 text-base leading-none text-gray-900 p-3 focus:outline-none focus:border-blue-700 mt-4 bg-gray-100 border rounded border-gray-200"
               ></textarea>
             </div>
           </div>
           <div class="flex items-center justify-center w-full">
             <button
+              id="btn"
               class="mt-9 inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-black transition duration-200 rounded-full border border-black shadow-md hover:bg-black hover:text-white focus:shadow-outline focus:outline-none"
             >
               Send message
@@ -1442,9 +1454,38 @@
         designed By: Pratik Bhattarai
       </p>
     </footer>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
+    </script>
+    <script>
+      var btn = document.getElementById("btn");
+      btn.addEventListener("click", function (e) {
+        e.preventDefault();
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var subject = document.getElementById("subject").value;
+        var message = document.getElementById("message").value;
+        var body =
+          "name:" +
+          name +
+          "<br/> email: " +
+          email +
+          "<br/> subject: " +
+          subject +
+          "<br/> message: " +
+          message;
+        Email.send({
+          Host: "smtp.yourisp.com",
+          Username: "bhattaraipratik663@gmail.com",
+          Password: "fmfnwhhmdarbfhpa",
+          To: "bhattaraipratik663@gmail.com",
+          From: email,
+          Subject: subject,
+          Body: body,
+        }).then((message) => alert(message));
+      });
     </script>
   </body>
 </html>
